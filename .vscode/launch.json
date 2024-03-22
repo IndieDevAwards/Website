@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:Website}",
+            "name": "Debug IndieDevAwardsWebsite",
+            "program": "${workspaceFolder:Website}/.build/debug/IndieDevAwardsWebsite",
+            "preLaunchTask": "swift: Build Debug IndieDevAwardsWebsite"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:Website}",
+            "name": "Release IndieDevAwardsWebsite",
+            "program": "${workspaceFolder:Website}/.build/release/IndieDevAwardsWebsite",
+            "preLaunchTask": "swift: Build Release IndieDevAwardsWebsite"
+        }
+    ]
+}
