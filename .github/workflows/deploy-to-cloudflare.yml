@@ -2,8 +2,8 @@ name: Deploy Swift Package to Cloudflare Pages
 
 on:
   push:
-    branches:
-      - release
+    tags:
+      - 'v*'
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
