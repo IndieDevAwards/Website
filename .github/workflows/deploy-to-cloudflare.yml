@@ -7,8 +7,11 @@ on:
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build-and-deploy:
+    permissions:
+      contents: read
+      deployments: write
+    runs-on: macos-latest
 
     steps:
     - name: Checkout code
@@ -27,28 +30,15 @@ jobs:
       run: |
         .build/release/IndieDevAwardsWebsite
 
-  publish:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-    name: Publish to Cloudflare Pages
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      # Run a build step here if your project requires
-
-      - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: 1678d1e70dbdbf026e3ca056f893e76b
-          projectName: indiedevawards
-          directory: ./Build/
-          # Optional: Enable this if you want to have GitHub Deployments triggered
-          gitHubToken: ${{ secrets.CLOUDFLARE_GITHUB_APP }}
-          # Optional: Switch what branch you are publishing to.
-          # By default this will be the branch which triggered this workflow
-          branch: main
+    - name: Publish to Cloudflare Pages
+      uses: cloudflare/pages-action@v1
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: 1678d1e70dbdbf026e3ca056f893e76b
+        projectName: indiedevawards
+        directory: ./Build/
+        # Optional: Enable this if you want to have GitHub Deployments triggered
+        gitHubToken: ${{ secrets.CLOUDFLARE_GITHUB_APP }}
+        # Optional: Switch what branch you are publishing to.
+        # By default this will be the branch which triggered this workflow
+        branch: main
