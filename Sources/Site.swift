@@ -15,8 +15,8 @@ struct IgniteWebsite {
 }
 
 struct ExampleSite: Site {    
-    var name = "My Awesome Site"
-    var baseTitle = " – My Awesome Site"
+    var name = "The Indie Dev Awards"
+    var baseTitle = " – The Indie Dev Awards"
     var url = URL("https://indiedevawards.com")
 
     var builtInIconsEnabled = true
