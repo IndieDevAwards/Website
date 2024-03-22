@@ -1,0 +1,64 @@
+name: Deploy Preview Branch to Cloudflare Pages
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy-preview:
+    permissions:
+      contents: read
+      deployments: write
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Swift
+      uses: swift-actions/setup-swift@v2
+      with:
+        swift-version: '5.9' # Set the Swift version you need
+
+    - name: Build Swift package
+      run: |
+        swift build --configuration release
+
+    - name: Run Swift package
+      run: |
+        .build/release/IndieDevAwardsWebsite
+
+    - name: Publish to Cloudflare Pages
+      id: cloudflare-pages
+      uses: cloudflare/pages-action@v1
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: 1678d1e70dbdbf026e3ca056f893e76b
+        projectName: indiedevawards
+        directory: ./Build/
+        # Publish to a preview branch named after the pull request number
+        branch: pr-${{ github.event.pull_request.number }}
+
+    - name: Get Cloudflare Preview URL
+      id: get-url
+      run: echo "::set-output name=url::https://indiedevawards.pages.dev/pr-${{ github.event.pull_request.number }}/"
+
+    - name: Comment on Pull Request
+      if: always()
+      uses: actions/github-script@v4
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const { context, github } = require('@actions/github');
+
+          const comment = `
+          Preview URL: ${process.env.url}
+          `;
+
+          github.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: comment
+          });
