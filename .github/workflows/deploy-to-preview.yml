@@ -48,7 +48,7 @@ jobs:
       if: always()
       uses: actions/github-script@v4
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.COMMUNICATIONS_BOT }}
         script: |
           const comment = `
           We Published a preview of this PR. You can view it [here](${process.env.url}).
