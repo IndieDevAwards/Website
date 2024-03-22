@@ -28,6 +28,7 @@ jobs:
         .build/release/IndieDevAwardsWebsite
 
   publish:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
