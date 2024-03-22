@@ -50,8 +50,6 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const { context, github } = require('@actions/github');
-
           const comment = `
           We Published a preview of this PR. You can view it [here](${process.env.url}).
           `;
