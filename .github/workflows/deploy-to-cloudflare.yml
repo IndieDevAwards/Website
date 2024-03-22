@@ -41,4 +41,4 @@ jobs:
         gitHubToken: ${{ secrets.CLOUDFLARE_GITHUB_APP }}
         # Optional: Switch what branch you are publishing to.
         # By default this will be the branch which triggered this workflow
-        branch: main
+        branch: release
