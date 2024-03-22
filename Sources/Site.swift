@@ -30,26 +30,7 @@ struct ExampleSite: Site {
     var theme = MyTheme()
 
     var pages: [any StaticPage] {
-        ContentExamples()
-        GridExamples()
-        NavigationExamples()
-        TextExamples()
-
-        AccordionExamples()
-        AlertExamples()
-        BadgeExamples()
-        CardExamples()
-        CarouselExamples()
-        CodeExamples()
-        DropdownExamples()
-        EmbedExamples()
-        ImageExamples()
-        IncludeExamples()
-        LinkExamples()
-        ListExamples()
-        QuoteExamples()
-        StylingExamples()
-        TableExamples()
+        homePage
     }
 
     var layouts: [any ContentPage] {

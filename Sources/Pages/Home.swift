@@ -12,48 +12,24 @@ struct Home: StaticPage {
     var title = "Home"
 
     func body(context: PublishingContext) -> [BlockElement] {
-        Text("Welcome to ExampleSite!")
+        Text("Welcome to The Indie Developer Awards!")
             .font(.title1)
 
-        Text("This site is a demonstration of a wide variety of Ignite elements and components all in one place, so you can find code samples for your own sites.")
+        Text("We are a brand new annual award show to celebrate things that developers did in 2024.")
             .font(.lead)
-
-        Text("Key concepts")
+        
+        Text("Award Categories Coming Soon...")
             .font(.title2)
-
-        Text("Before you create sites yourself, you should review some key concepts that underpin how Ignite works:")
-
-        List {
-            Link("Grid Layout", target: GridExamples())
-            Link("Navigation", target: NavigationExamples())
-            Link("Content", target: ContentExamples())
-            Link("Text", target: TextExamples())
-            Link("Styling", target: StylingExamples())
+        Table {
+            for _ in 0..<5 {
+                Row {
+                    for _ in 0..<4 {
+                        Image("/images/award.svg", description: "Award")
+                            .frame(width: "25%")
+                    }
+                }
+            }
         }
-        .listStyle(.ordered(.default))
-
-
-        Text("Examples")
-            .font(.title2)
-            .margin(.top, .large)
-
-        List {
-            Link("Accordions", target: AccordionExamples())
-            Link("Alerts", target: AlertExamples())
-            Link("Badges", target: BadgeExamples())
-            Link("Buttons", target: ButtonExamples())
-            Link("Cards", target: CardExamples())
-            Link("Carousels", target: CarouselExamples())
-            Link("Code", target: CodeExamples())
-            Link("Dropdowns", target: DropdownExamples())
-            Link("Embeds", target: EmbedExamples())
-            Link("Images", target: ImageExamples())
-            Link("Includes", target: IncludeExamples())
-            Link("Links", target: LinkExamples())
-            Link("Lists", target: ListExamples())
-            Link("Quotes", target: QuoteExamples())
-            Link("Tables", target: TableExamples())
-        }
-        .listStyle(.unordered(.default))
+        .horizontalAlignment(.center)
     }
 }
