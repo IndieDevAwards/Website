@@ -11,7 +11,7 @@ jobs:
     permissions:
       contents: read
       deployments: write
-    runs-on: macos-latest
+    runs-on: macos-14
 
     steps:
     - name: Checkout code
@@ -20,7 +20,7 @@ jobs:
     - name: Set up Swift
       uses: swift-actions/setup-swift@v2
       with:
-        swift-version: '5.10' # Set the Swift version you need
+        swift-version: '5.9' # Set the Swift version you need
 
     - name: Build Swift package
       run: |
