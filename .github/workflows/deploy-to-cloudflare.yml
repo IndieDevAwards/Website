@@ -23,11 +23,9 @@ jobs:
       run: |
         swift build --configuration release
 
-    - name: Archive artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: swift-package
-        path: .build/release/ # Set the correct path to your built package
+    - name: Run Swift package
+      run: |
+        .build/release/IndieDevAwardsWebsite
 
   publish:
     runs-on: ubuntu-latest
