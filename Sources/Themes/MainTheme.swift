@@ -17,8 +17,6 @@ struct MyTheme: Theme {
                 NavBar()
 
                 page.body
-
-                IgniteFooter()
             }
             .padding(.vertical, 80)
         }

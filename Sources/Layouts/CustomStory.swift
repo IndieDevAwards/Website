@@ -14,6 +14,7 @@ struct CustomStory: ContentPage {
             Text {
                 Image(image, description: content.imageDescription)
                     .resizable()
+                    .frame(width: "50%")
             }
         }
 

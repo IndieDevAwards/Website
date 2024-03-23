@@ -4,7 +4,7 @@ import Ignite
 @main
 struct IgniteWebsite {
     static func main() {
-        let site = ExampleSite()
+        let site = IndieDevAwards()
 
         do {
             try site.publish()
@@ -14,7 +14,7 @@ struct IgniteWebsite {
     }
 }
 
-struct ExampleSite: Site {    
+struct IndieDevAwards: Site {
     var name = "The Indie Dev Awards"
     var baseTitle = " – The Indie Dev Awards"
     var url = URL("https://indiedevawards.com")
