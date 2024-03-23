@@ -26,7 +26,7 @@ struct ComingSoonLanding: StaticPage {
                     .linkStyle(.button)
                     .margin(.trailing, .small)
                     .role(.primary)
-                Link("Sponsor Us", target: URL("mailto:info@indiedevawards.com"))
+                Link("Sponsor Us", target: URL("mailto:sponsor@indiedevawards.com"))
                     .linkStyle(.button)
                     .margin(.leading, .small)
                     .role(.success)
