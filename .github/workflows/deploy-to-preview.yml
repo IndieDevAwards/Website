@@ -45,12 +45,13 @@ jobs:
       run: echo "::set-output name=url::https://indiedevawards.pages.dev/pr-${{ github.event.pull_request.number }}/"
 
     - name: Comment on Pull Request
-      uses: exercism/pr-commenter-action@v1.5.1
+      uses: actions/github-script@v6
       with:
-        github-token: "${{ github.token }}"
-        config-file: ".github/pr-commenter.yml"
-        template-variables: |
-            {
-                "prAuthor": "${{ github.event.pull_request.user.login }}",
-                "previewUrl": "https://indiedevawards.pages.dev/pr-${{ github.event.pull_request.number }}"
-            }
+        script: |
+            github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: 'We have deployed a preview of this branch to [Cloudflare Pages](${{ steps.get-url.outputs.url }}) 🚀'
+            })
+
