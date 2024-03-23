@@ -25,7 +25,7 @@ struct IndieDevAwards: Site {
     var robotsConfiguration = Robots()
     var author = "Morris Richman"
 
-    var homePage = Home()
+    var homePage = ComingSoonLanding()
     var tagPage = Tags()
     var theme = MyTheme()
 
