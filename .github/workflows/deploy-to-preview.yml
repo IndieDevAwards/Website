@@ -47,7 +47,7 @@ jobs:
     - name: Comment on Pull Request
       uses: exercism/pr-commenter-action@v1.5.1
       with:
-        github-token: "${{ secrets.COMMUNICATIONS_BOT }}"
+        github-token: "${{ github.token }}"
         config-file: ".github/pr-commenter.yml"
         template-variables: |
             {
