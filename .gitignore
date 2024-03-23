@@ -5,3 +5,7 @@
 # Build files
 Build/
 .build/
+
+# IDE Files
+./vscode/
+./swiftpm/
