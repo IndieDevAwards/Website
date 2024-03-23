@@ -7,5 +7,5 @@ Build/
 .build/
 
 # IDE Files
-./vscode/
-./swiftpm/
+.vscode/
+.swiftpm/
