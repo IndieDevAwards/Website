@@ -45,18 +45,12 @@ jobs:
       run: echo "::set-output name=url::https://indiedevawards.pages.dev/pr-${{ github.event.pull_request.number }}/"
 
     - name: Comment on Pull Request
-      if: always()
-      uses: actions/github-script@v4
+      uses: exercism/pr-commenter-action@v1.5.1
       with:
-        github-token: ${{ secrets.COMMUNICATIONS_BOT }}
-        script: |
-          const comment = `
-          We Published a preview of this PR. You can view it [here](${process.env.url}).
-          `;
-
-          github.issues.createComment({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: comment
-          });
+        github-token: "${{ secrets.COMMUNICATIONS_BOT }}"
+        config-file: ".github/pr-commenter.yml"
+        template-variables: |
+            {
+                "prAuthor": "${{ github.event.pull_request.user.login }}",
+                "previewUrl": "https://indiedevawards.pages.dev/pr-${{ github.event.pull_request.number }}"
+            }

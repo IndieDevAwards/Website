@@ -1,0 +1,5 @@
+comment:
+  header: |
+    Hi {{ prAuthor }}! Thank you for your contribution.
+
+    {{^branchNamePrefix}}Your branch name doesn't start with the required prefix 'ref-'.{{/branchNamePrefix}}
