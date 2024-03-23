@@ -45,7 +45,7 @@ jobs:
       run: echo "::set-output name=url::https://indiedevawards.pages.dev/pr-${{ github.event.pull_request.number }}/"
 
     - name: Comment on Pull Request
-      uses: actions/github-script@v6
+      uses: actions/github-script@v7
       with:
         script: |
             github.rest.issues.createComment({
