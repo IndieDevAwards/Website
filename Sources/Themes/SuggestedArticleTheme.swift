@@ -32,11 +32,9 @@ struct SuggestedArticleTheme: Theme {
                         }
                     }
                     .width(3)
-                    .position(.stickyTop)
+                    .position(.fixedBottom)
                     .padding(.top, 80)
                 }
-
-                IgniteFooter()
             }
         }
     }
