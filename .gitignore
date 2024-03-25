@@ -9,3 +9,4 @@ Build/
 # IDE Files
 .vscode/
 .swiftpm/
+Package.resolved
