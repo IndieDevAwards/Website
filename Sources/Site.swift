@@ -28,6 +28,8 @@ struct IndieDevAwards: Site {
     var homePage = ComingSoonLanding()
     var tagPage = Tags()
     var theme = MyTheme()
+    
+    var favicon = URL("/images/favicon.png")
 
     var pages: [any StaticPage] {
         homePage
