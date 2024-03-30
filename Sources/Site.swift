@@ -21,7 +21,7 @@ struct IndieDevAwards: Site {
 
     var builtInIconsEnabled = true
     var syntaxHighlighters = [SyntaxHighlighter.swift, .python, .ruby]
-    var feedConfiguration = FeedConfiguration(mode: .full, contentCount: 20, image: .init(url: "https://indiedevawards.com/images/icon32.png", width: 32, height: 32))
+    var feedConfiguration = FeedConfiguration(mode: .full, contentCount: 20, image: .init(url: "https://indiedevawards.com/images/favicon.png", width: 32, height: 32))
     var robotsConfiguration = Robots()
     var author = "Morris Richman"
 
