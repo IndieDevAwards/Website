@@ -9,7 +9,7 @@ import Foundation
 import Ignite
 
 struct ComingSoonLanding: StaticPage {
-    var title: String = "Coming Soon | Indie Dev Awards"
+    var title: String = "The Indie Dev Awards"
     var image: URL? = URL("/images/logo-color-social-share.png")
     var theme = ComingSoonTheme()
     
