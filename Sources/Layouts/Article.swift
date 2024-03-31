@@ -33,7 +33,7 @@ struct Article: ContentPage {
             .font(.title1)
         
         if let author = content.author {
-            Text(markdown: "By: [\(author)](/author/\(author.replacingOccurrences(of: " ", with: "-")))")
+            Text(markdown: "By: [\(author)](/author/\(author.lowercased().replacingOccurrences(of: " ", with: "-")))")
         }
 
         if content.hasTags {
