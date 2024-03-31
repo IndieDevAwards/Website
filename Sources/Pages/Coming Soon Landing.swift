@@ -58,6 +58,7 @@ struct ComingSoonLanding: StaticPage {
                     .linkStyle(.button)
                     .margin()
             }
+            .style("padding-top: calc(40px + min(0px, (510px - 100vw) / 2));")
         }
         .horizontalAlignment(.center)
     }
