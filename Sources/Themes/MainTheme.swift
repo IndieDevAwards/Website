@@ -16,7 +16,10 @@ struct MyTheme: Theme {
             Body {
                 NavBar()
 
-                page.body
+                Group {
+                    page.body
+                }
+                .style("padding-top: calc(40px + min(0px, (395px - 100vw) / 2));")
                 IgniteFooter()
             }
             .padding(.vertical, 80)

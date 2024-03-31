@@ -16,7 +16,6 @@ struct NavBar: Component {
             Link("Blog", target: "/blog")
         }
         .navigationItemAlignment(.trailing)
-        .navigationBarStyle(.dark)
         .backgroundColor(.init(hex: "#ff4057"))
         .position(.fixedTop)
     }
