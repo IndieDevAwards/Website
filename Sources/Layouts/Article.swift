@@ -11,38 +11,41 @@ import Ignite
 struct Article: ContentPage {
     
     func body(content: Content, context: PublishingContext) -> [any BlockElement] {
-        if let image = content.image {
-            if let imageHidden = content.metadata["image-hidden"] as? String {
-                if imageHidden == "false" {
+        Group {
+            if let image = content.image {
+                if let imageHidden = content.metadata["image-hidden"] as? String {
+                    if imageHidden == "false" {
+                        Text {
+                            Image(image, description: content.imageDescription)
+                                .resizable()
+                                .frame(width: "50%")
+                        }
+                    }
+                } else {
                     Text {
                         Image(image, description: content.imageDescription)
                             .resizable()
                             .frame(width: "50%")
                     }
                 }
-            } else {
+            }
+            
+            Text(content.title)
+                .font(.title1)
+            
+            if let author = content.author {
+                Text(markdown: "By: [\(author)](/author/\(author.lowercased().replacingOccurrences(of: " ", with: "-")))")
+            }
+            
+            if content.hasTags {
                 Text {
-                    Image(image, description: content.imageDescription)
-                        .resizable()
-                        .frame(width: "50%")
+                    content.tagLinks(in: context)
                 }
+                .font(.title3)
             }
+            
+            Text(content.body)
         }
-
-        Text(content.title)
-            .font(.title1)
-        
-        if let author = content.author {
-            Text(markdown: "By: [\(author)](/author/\(author.lowercased().replacingOccurrences(of: " ", with: "-")))")
-        }
-
-        if content.hasTags {
-            Text {
-                content.tagLinks(in: context)
-            }
-            .font(.title3)
-        }
-
-        Text(content.body)
+//        .padding(.top, .extraLarge)
     }
 }
