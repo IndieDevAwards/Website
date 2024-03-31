@@ -18,6 +18,7 @@ struct ComingSoonTheme: Theme {
                 IgniteFooter()
             }
             .padding(.vertical, 80)
+            .padding(.horizontal, .small)
         }
     }
 }
