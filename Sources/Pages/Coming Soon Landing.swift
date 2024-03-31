@@ -20,8 +20,6 @@ struct ComingSoonLanding: StaticPage {
                 .frame(width: "50%")
             Text("We are a brand new award show dedicated to spotlighting indie projects and innovation in a variety of categories across the development industry.")
                 .margin(.vertical)
-            Text("More Coming Soon...")
-                .font(.title3)
             
             Group {
                 Link("Get Involved!", target: URL("mailto:info@indiedevawards.com"))
@@ -46,17 +44,20 @@ struct ComingSoonLanding: StaticPage {
                 // Desktop Blog Posts
                 blogPosts(context: context)
                 .columns(2)
-                .style("display: none; min-width: 900px;")
+                .style("display: none; min-width: 500px;")
                 // Mobile Blog Posts
                 blogPosts(context: context)
                 .columns(1)
-                .style("display: block; max-width: 900px;")
+                .style("display: block; max-width: 500px;")
                 
                 Link("See More →", target: "/blog")
                     .linkStyle(.button)
                     .margin()
             }
             .style("padding-top: calc(40px + min(0px, (510px - 100vw) / 2));")
+            Text(markdown: "**More Coming Soon...**")
+                .font(.title3)
+                .margin()
         }
         .horizontalAlignment(.center)
     }
