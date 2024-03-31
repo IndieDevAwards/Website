@@ -3,6 +3,7 @@ author: Morris Richman
 description: We are thrilled to announce the launch of the inaugural **Indie Dev Awards**...
 title: Introducing the Indie Dev Awards
 clipped-image: /images/Favicon.svg
+alt: The image for 'Introducing the Indie Dev Awards'
 date: 2024-04-10 15:00
 tags: 2024
 layout: Article

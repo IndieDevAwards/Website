@@ -23,14 +23,18 @@ struct ArticleCell: Component {
         Card {
             Section {
                 if let image {
-                    Image(image)
+                    Image(image, description: article.imageDescription)
                         .resizable()
                         .frame(width: "50%")
                 }
                 Group {
                     Text(article.title)
                         .font(.title2)
-                    Text(article.date.formatted(date: .abbreviated, time: .shortened))
+                    if let author = article.author, showAuthor {
+                        Text(markdown: "\(article.date.formatted(date: .abbreviated, time: .shortened)) by [\(author)](/author/\(author.replacingOccurrences(of: " ", with: "-")))")
+                    } else {
+                        Text(article.date.formatted(date: .abbreviated, time: .shortened))
+                    }
                 }
             }
             .padding(.bottom)

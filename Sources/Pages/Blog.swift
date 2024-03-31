@@ -21,11 +21,11 @@ struct Blog: StaticPage {
                 for post in articles(forRow: rowNum, context: context) {
                     Group {
                         if let image = post.metadata["clipped-image"] as? String {
-                            ArticleCell(post, image: image, showAuthor: false)
+                            ArticleCell(post, image: image)
                         } else if let image = post.image {
-                            ArticleCell(post, image: image, showAuthor: false)
+                            ArticleCell(post, image: image)
                         } else {
-                            ArticleCell(post, image: nil, showAuthor: false)
+                            ArticleCell(post, image: nil)
                         }
                     }
                 }

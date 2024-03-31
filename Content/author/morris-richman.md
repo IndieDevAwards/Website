@@ -1,6 +1,7 @@
 ---
 title: Morris Richman
 layout: Author
+alt: A memoji representation of Morris
 image: /images/photos/Morris-Profile-Pic.png
 ---
 

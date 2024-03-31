@@ -15,7 +15,7 @@ struct Author: ContentPage {
         
         Text {
             if let image = content.image {
-                Image(image)
+                Image(image, description: content.imageDescription)
                     .resizable()
                     .frame(width: "20%")
             }
