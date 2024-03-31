@@ -14,7 +14,7 @@ struct MyTheme: Theme {
             Head(for: page, in: context)
 
             Body {
-                NavBar()
+                NavBar(currentPage: page)
 
                 Group {
                     page.body
