@@ -13,6 +13,7 @@ struct NavBar: Component {
     func body(context: PublishingContext) -> [any PageElement] {
         NavigationBar(logo: Image("/images/logo-white.svg", description: "Site logo").frame(width: "300px", height: "70%")) {
             Link("Home", target: "/")
+            Link("Blog", target: "/blog")
         }
         .navigationItemAlignment(.trailing)
         .navigationBarStyle(.dark)
