@@ -18,6 +18,8 @@ struct IndieDevAwards: Site {
     var name = "The Indie Dev Awards"
     var baseTitle = " – The Indie Dev Awards"
     var url = URL("https://indiedevawards.com")
+    
+    var favicon = URL(string: "/images/favicon.png")
 
     var builtInIconsEnabled = true
     var syntaxHighlighters = [SyntaxHighlighter.swift, .python, .ruby]
@@ -28,8 +30,6 @@ struct IndieDevAwards: Site {
     var homePage = ComingSoonLanding()
     var tagPage = Tags()
     var theme = MyTheme()
-    
-    var favicon = URL("/images/favicon.png")
 
     var pages: [any StaticPage] {
         homePage
