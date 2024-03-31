@@ -10,6 +10,8 @@ import Ignite
 
 struct Blog: StaticPage {
     var title: String = "Blog | Indie Dev Awards"
+    var theme = SuggestedArticleTheme()
+    var image: URL? = URL("/images/logo-color-social-share.png")
     
     func body(context: PublishingContext) -> [any BlockElement] {
         Text("Blog")
@@ -20,13 +22,7 @@ struct Blog: StaticPage {
             for rowNum in 0..<Int(Double(posts(context: context).count/2).rounded()+1) {
                 for post in articles(forRow: rowNum, context: context) {
                     Group {
-                        if let image = post.metadata["clipped-image"] as? String {
-                            ArticleCell(post, image: image)
-                        } else if let image = post.image {
-                            ArticleCell(post, image: image)
-                        } else {
-                            ArticleCell(post, image: nil)
-                        }
+                        ArticleCell(post)
                     }
                 }
                 if articles(forRow: rowNum, context: context).count == 1 {

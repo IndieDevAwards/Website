@@ -10,16 +10,32 @@ import Ignite
 
 struct ArticleCell: Component {    
     let article: Content
-    let image: String?
     let showAuthor: Bool
     
-    init(_ article: Content, image: String?, showAuthor: Bool = true) {
+    init(_ article: Content, showAuthor: Bool = true) {
         self.article = article
-        self.image = image
         self.showAuthor = showAuthor
     }
     
     func body(context: PublishingContext) -> [any PageElement] {
+        if let image = article.metadata["clipped-image"] as? String {
+            innerWorkings(image: image)
+        } else if let image = article.image {
+            if let imageHidden = article.metadata["image-hidden"] as? String {
+                if imageHidden == "false" {
+                    innerWorkings(image: image)
+                } else {
+                    innerWorkings(image: nil)
+                }
+            } else {
+                innerWorkings(image: image)
+            }
+        } else {
+            innerWorkings(image: nil)
+        }
+    }
+    
+    func innerWorkings(image: String?) -> any PageElement {
         Card {
             Section {
                 if let image {

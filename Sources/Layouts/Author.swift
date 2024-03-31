@@ -29,13 +29,7 @@ struct Author: ContentPage {
             for rowNum in 0..<Int(Double(posts(content, context: context).count/2).rounded()+1) {
                 for post in articles(forRow: rowNum, content: content, context: context) {
                     Group {
-                        if let image = post.metadata["clipped-image"] as? String {
-                            ArticleCell(post, image: image, showAuthor: false)
-                        } else if let image = post.image {
-                            ArticleCell(post, image: image, showAuthor: false)
-                        } else {
-                            ArticleCell(post, image: nil, showAuthor: false)
-                        }
+                        ArticleCell(post, showAuthor: false)
                     }
                 }
                 if articles(forRow: rowNum, content: content, context: context).count == 1 {

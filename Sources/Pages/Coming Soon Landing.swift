@@ -45,13 +45,7 @@ struct ComingSoonLanding: StaticPage {
                     for i in 0..<2 {
                         Group {
                             if let post = context.content(ofType: "article").sorted(by: { $0.date > $1.date }).first(1, offsetBy: i).first {
-                                if let image = post.metadata["clipped-image"] as? String {
-                                    ArticleCell(post, image: image)
-                                } else if let image = post.image {
-                                    ArticleCell(post, image: image)
-                                } else {
-                                    ArticleCell(post, image: nil)
-                                }
+                                ArticleCell(post)
                             } else {
                                 Spacer()
                                     .frame(height: "100%")

@@ -12,10 +12,20 @@ struct Article: ContentPage {
     
     func body(content: Content, context: PublishingContext) -> [any BlockElement] {
         if let image = content.image {
-            Text {
-                Image(image, description: content.imageDescription)
-                    .resizable()
-                    .frame(width: "50%")
+            if let imageHidden = content.metadata["image-hidden"] as? String {
+                if imageHidden == "false" {
+                    Text {
+                        Image(image, description: content.imageDescription)
+                            .resizable()
+                            .frame(width: "50%")
+                    }
+                }
+            } else {
+                Text {
+                    Image(image, description: content.imageDescription)
+                        .resizable()
+                        .frame(width: "50%")
+                }
             }
         }
 
