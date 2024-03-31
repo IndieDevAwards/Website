@@ -33,7 +33,7 @@ struct About: StaticPage {
                 Card {
                     if let image = person.image {
                         Text(
-                            Image(image)
+                            Image(image, description: person.imageDescription)
                                 .resizable()
                                 .frame(width: "50%")
                         )
