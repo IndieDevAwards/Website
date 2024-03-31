@@ -41,6 +41,7 @@ struct ArticleCell: Component {
             Text(article.description)
             
             Link("Read Full Article...", target: article.path)
+                .linkStyle(.button)
         }
         .frame(height: "100%")
         .style("cursor:pointer")
