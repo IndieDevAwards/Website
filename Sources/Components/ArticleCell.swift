@@ -47,7 +47,7 @@ struct ArticleCell: Component {
                     Text(article.title)
                         .font(.title2)
                     if let author = article.author, showAuthor {
-                        Text(markdown: "\(article.date.formatted(date: .abbreviated, time: .shortened)) by [\(author)](/author/\(author.replacingOccurrences(of: " ", with: "-")))")
+                        Text(markdown: "\(article.date.formatted(date: .abbreviated, time: .shortened)) by [\(author)](/author/\(author.lowercased().replacingOccurrences(of: " ", with: "-")))")
                     } else {
                         Text(article.date.formatted(date: .abbreviated, time: .shortened))
                     }
