@@ -34,6 +34,7 @@ struct IndieDevAwards: Site {
     var pages: [any StaticPage] {
         homePage
         Blog()
+        About()
     }
 
     var layouts: [any ContentPage] {

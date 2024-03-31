@@ -14,6 +14,7 @@ struct NavBar: Component {
         NavigationBar(logo: Image("/images/logo-white.svg", description: "Site logo").frame(width: "300px", height: "70%")) {
             Link("Home", target: "/")
             Link("Blog", target: "/blog")
+            Link("Our Team", target: "/about")
         }
         .navigationItemAlignment(.trailing)
         .navigationBarStyle(.dark)
