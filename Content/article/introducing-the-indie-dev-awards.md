@@ -26,13 +26,13 @@ For our purposes, an **Indie Developer** is an individual or a small group of pe
 
 As we embark on this exciting journey to honor indie developers, we are inviting companies to join us as sponsors. By sponsoring the Indie Dev Awards, your organization will have the opportunity to:
 
-1. **Support the Indie Gaming Community**: By sponsoring the Indie Dev Awards, you demonstrate your commitment to fostering creativity and innovation within the indie gaming community.
+1. **Support the Indie Software Community**: By sponsoring the Indie Dev Awards, you demonstrate your commitment to fostering creativity and innovation within the indie software community.
 
-2. **Gain Exposure and Recognition**: As a sponsor, your brand will be prominently featured throughout the event, reaching thousands of developers, industry professionals, and gaming enthusiasts worldwide. From logo placement to dedicated sponsor shoutouts, you'll receive valuable exposure across our marketing channels.
+2. **Gain Exposure and Recognition**: As a sponsor, your brand will be prominently featured throughout the event, reaching thousands of developers, industry professionals, and software enthusiasts worldwide. From logo placement to dedicated sponsor shoutouts, you'll receive valuable exposure across our marketing channels.
 
 3. **Connect with Top Talent**: The Indie Dev Awards aims to attract some of the most talented and passionate indie developers in the industry. As a sponsor, you'll have the chance to network with these individuals and forge valuable connections that could lead to exciting collaborations in the future.
 
-4. **Align Your Brand with Innovation**: By supporting the Indie Dev Awards, you align your brand with the values of innovation, creativity, and passion that define the indie gaming community. This association can enhance your brand's reputation and appeal to a younger, tech-savvy audience.
+4. **Align Your Brand with Innovation**: By supporting the Indie Dev Awards, you align your brand with the values of innovation, creativity, and passion that define the indie software community. This association can enhance your brand's reputation and appeal to a younger, tech-savvy audience.
 
 ### **How to Become a Sponsor**
 
@@ -42,8 +42,8 @@ To learn more about sponsorship opportunities, please contact us at [sponsor@ind
 
 ## **Conclusion**
 
-The Indie Dev Awards is set to be a milestone event in the indie gaming community, celebrating the very essence of creativity, innovation, and passion that drives indie game development forward. It's more than just an awards show; it's a platform where indie developers from all corners of the globe can come together to showcase their remarkable creations, share their experiences, and inspire others.
+The Indie Dev Awards is set to be a milestone event in the indie software community, celebrating the very essence of creativity, innovation, and passion that drives indie software development forward. It's more than just an awards show; it's a platform where indie developers from all corners of the globe can come together to showcase their remarkable creations, share their experiences, and inspire others.
 
-Join us in making the Indie Dev Awards a truly unforgettable experience for the indie gaming community. Together, let's shine a spotlight on the incredible talent and dedication of indie developers, and pave the way for a future filled with groundbreaking games and endless possibilities. If you want to get involved, feel free to [email us](mailto:info@indiedevawards.com).
+Join us in making the Indie Dev Awards a truly unforgettable experience for the indie software community. Together, let's shine a spotlight on the incredible talent and dedication of indie developers, and pave the way for a future filled with groundbreaking software and endless possibilities. If you want to get involved, feel free to [email us](mailto:info@indiedevawards.com).
 
 *Stay tuned for updates and announcements by following us on [𝕏](https://x.com/dev_awards)* 
