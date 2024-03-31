@@ -12,6 +12,14 @@ struct Author: ContentPage {
     func body(content: Content, context: PublishingContext) -> [any BlockElement] {
         Text(content.title.replacingOccurrences(of: "-", with: " ").capitalized)
             .font(.title1)
+        if let subtitle = content.subtitle {
+            Text {
+                Badge("\(subtitle.replacingOccurrences(of: "-", with: " ").capitalized)")
+                    .role(.success)
+            }
+            .font(.lead)
+            .horizontalAlignment(.leading)
+        }
         
         Text {
             if let image = content.image {

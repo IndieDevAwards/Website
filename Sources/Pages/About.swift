@@ -43,6 +43,15 @@ struct About: StaticPage {
                         .font(.title3)
                         .horizontalAlignment(.center)
                     
+                    if let subtitle = person.subtitle {
+                        Text {
+                            Badge("\(subtitle.replacingOccurrences(of: "-", with: " ").capitalized)")
+                                .role(.success)
+                        }
+                        .font(.lead)
+                        .horizontalAlignment(.center)
+                    }
+                    
 //                    if person.description.count <= 60 {
                         Text(markdown: "*\(String(person.description))*")
                             .horizontalAlignment(.center)
