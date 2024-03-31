@@ -14,6 +14,14 @@ struct ComingSoonLanding: StaticPage {
     var theme = ComingSoonTheme()
     
     func body(context: PublishingContext) -> [BlockElement] {
+        NavigationBar {
+            Link(Text(markdown: "**Home**"), target: "/")
+            Link("Blog", target: "/blog")
+            Link("Our Team", target: "/about")
+        }
+        .navigationItemAlignment(.trailing)
+        .navigationBarStyle(.light)
+        .position(.fixedTop)
         Group {
             Image("/images/logo-color.svg", description: "Site logo")
                 .resizable()
