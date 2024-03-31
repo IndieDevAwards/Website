@@ -54,7 +54,9 @@ struct ArticleCell: Component {
                 }
             }
             .padding(.bottom)
-            Text(article.description)
+            if let description = article.metadata["description"] as? String {
+                Text(markdown: description)
+            }
             
             Link("Read Full Article...", target: article.path)
                 .linkStyle(.button)
