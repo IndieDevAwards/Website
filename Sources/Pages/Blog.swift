@@ -10,7 +10,6 @@ import Ignite
 
 struct Blog: StaticPage {
     var title: String = "Blog | Indie Dev Awards"
-    var theme = SuggestedArticleTheme()
     var image: URL? = URL("/images/logo-color-social-share.png")
     
     func body(context: PublishingContext) -> [any BlockElement] {

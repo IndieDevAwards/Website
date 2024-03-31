@@ -11,6 +11,7 @@ import Ignite
 struct ComingSoonLanding: StaticPage {
     var title: String = "Coming Soon | Indie Dev Awards"
     var image: URL? = URL("/images/logo-color-social-share.png")
+    var theme = ComingSoonTheme()
     
     func body(context: PublishingContext) -> [BlockElement] {
         Group {
