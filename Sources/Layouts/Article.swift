@@ -1,5 +1,5 @@
 //
-// CustomStory.swift
+// Article.swift
 // IndieDevAwardsWebsite
 // https://www.github.com/twostraws/Ignite
 // See LICENSE for license information.
@@ -8,7 +8,8 @@
 import Foundation
 import Ignite
 
-struct CustomStory: ContentPage {
+struct Article: ContentPage {
+    
     func body(content: Content, context: PublishingContext) -> [any BlockElement] {
         if let image = content.image {
             Text {
@@ -20,6 +21,10 @@ struct CustomStory: ContentPage {
 
         Text(content.title)
             .font(.title1)
+        
+        if let author = content.author {
+            Text(markdown: "By: [\(author)](/author/\(author.replacingOccurrences(of: " ", with: "-")))")
+        }
 
         if content.hasTags {
             Text {

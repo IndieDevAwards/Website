@@ -36,8 +36,8 @@ struct IndieDevAwards: Site {
     }
 
     var layouts: [any ContentPage] {
-        Story()
-        CustomStory()
+        Author()
+        Article()
     }
 }
 

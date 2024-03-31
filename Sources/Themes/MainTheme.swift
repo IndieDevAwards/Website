@@ -14,7 +14,9 @@ struct MyTheme: Theme {
             Head(for: page, in: context)
 
             Body {
-//                NavBar()
+                if !page.title.contains("Coming Soon") {
+                    NavBar()
+                }
 
                 page.body
                 IgniteFooter()
