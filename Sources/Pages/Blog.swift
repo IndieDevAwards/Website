@@ -17,6 +17,18 @@ struct Blog: StaticPage {
             .font(.title1)
             .horizontalAlignment(.leading)
         Divider()
+        
+        // Desktop Blog Posts
+        blogPosts(context: context)
+        .columns(2)
+        .style("display: none; min-width: 500px;")
+        // Mobile Blog Posts
+        blogPosts(context: context)
+        .columns(1)
+        .style("display: block; max-width: 500px;")
+    }
+    
+    func blogPosts(context: PublishingContext) -> Section {
         Section {
             for rowNum in 0..<Int(Double(posts(context: context).count/2).rounded()+1) {
                 for post in articles(forRow: rowNum, context: context) {
@@ -32,7 +44,6 @@ struct Blog: StaticPage {
                 Spacer()
             }
         }
-        .columns(2)
     }
     
     func articles(forRow row: Int, context: PublishingContext) -> [Content] {

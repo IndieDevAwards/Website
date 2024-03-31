@@ -42,12 +42,16 @@ struct ComingSoonLanding: StaticPage {
                     .font(.title1)
                     .horizontalAlignment(.leading)
                 Divider()
+                
+                // Desktop Blog Posts
                 blogPosts(context: context)
                 .columns(2)
                 .style("display: none; min-width: 900px;")
+                // Mobile Blog Posts
                 blogPosts(context: context)
                 .columns(1)
                 .style("display: block; max-width: 900px;")
+                
                 Link("See More →", target: "/blog")
                     .linkStyle(.button)
                     .margin()

@@ -25,9 +25,11 @@ struct Author: ContentPage {
         Text("\(content.title.replacingOccurrences(of: "-", with: " ").capitalized)'s Articles")
             .font(.title2)
         Divider()
+        // Desktop Blog Posts
         blogPosts(content: content, context: context)
         .columns(2)
         .style("display: none; min-width: 500px;")
+        // Mobile Blog Posts
         blogPosts(content: content, context: context)
         .columns(1)
         .style("display: block; max-width: 500px;")
