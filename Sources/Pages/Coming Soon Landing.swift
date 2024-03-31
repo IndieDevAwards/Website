@@ -42,18 +42,12 @@ struct ComingSoonLanding: StaticPage {
                     .font(.title1)
                     .horizontalAlignment(.leading)
                 Divider()
-                Section {
-                    for i in 0..<2 {
-                        Group {
-                            if let post = context.content(ofType: "article").sorted(by: { $0.date > $1.date }).first(1, offsetBy: i).first {
-                                ArticleCell(post)
-                            } else {
-                                Spacer()
-                                    .frame(height: "100%")
-                            }
-                        }
-                    }
-                }
+                blogPosts(context: context)
+                .columns(2)
+                .style("display: none; min-width: 900px;")
+                blogPosts(context: context)
+                .columns(1)
+                .style("display: block; max-width: 900px;")
                 Link("See More →", target: "/blog")
                     .linkStyle(.button)
                     .margin()
@@ -61,6 +55,21 @@ struct ComingSoonLanding: StaticPage {
             .style("padding-top: calc(40px + min(0px, (510px - 100vw) / 2));")
         }
         .horizontalAlignment(.center)
+    }
+    
+    func blogPosts(context: PublishingContext) -> Section {
+        Section {
+            for i in 0..<2 {
+                Group {
+                    if let post = context.content(ofType: "article").sorted(by: { $0.date > $1.date }).first(1, offsetBy: i).first {
+                        ArticleCell(post)
+                    } else {
+                        Spacer()
+                            .frame(height: "100%")
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -25,6 +25,23 @@ struct Author: ContentPage {
         Text("\(content.title.replacingOccurrences(of: "-", with: " ").capitalized)'s Articles")
             .font(.title2)
         Divider()
+        blogPosts(content: content, context: context)
+        .columns(2)
+        .style("display: none; min-width: 500px;")
+        blogPosts(content: content, context: context)
+        .columns(1)
+        .style("display: block; max-width: 500px;")
+    }
+    
+    func articles(forRow row: Int, content: Content, context: PublishingContext) -> [Content] {
+        Array(posts(content, context: context).dropFirst(row*2)).first(2)
+    }
+    
+    func posts(_ content: Content, context: PublishingContext) -> [Content] {
+        context.content(ofType: "article").filter({ $0.author == content.title.replacingOccurrences(of: "-", with: " ").capitalized }).sorted(by: { $0.date > $1.date })
+    }
+    
+    func blogPosts(content: Content, context: PublishingContext) -> Section {
         Section {
             for rowNum in 0..<Int(Double(posts(content, context: context).count/2).rounded()+1) {
                 for post in articles(forRow: rowNum, content: content, context: context) {
@@ -40,15 +57,6 @@ struct Author: ContentPage {
                 Spacer()
             }
         }
-        .columns(2)
-    }
-    
-    func articles(forRow row: Int, content: Content, context: PublishingContext) -> [Content] {
-        Array(posts(content, context: context).dropFirst(row*2)).first(2)
-    }
-    
-    func posts(_ content: Content, context: PublishingContext) -> [Content] {
-        context.content(ofType: "article").filter({ $0.author == content.title.replacingOccurrences(of: "-", with: " ").capitalized }).sorted(by: { $0.date > $1.date })
     }
 }
 
