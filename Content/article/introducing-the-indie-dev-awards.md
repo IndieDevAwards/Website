@@ -18,6 +18,10 @@ We are thrilled to announce the launch of the inaugural **Indie Dev Awards**, a 
 
 The Indie Dev Awards will take place in late November or early December, bringing together indie developers, industry professionals, and software enthusiasts from around the globe. This cinematic livestream event promises to be a night to remember, featuring dazzling presentations, and of course, the much-anticipated awards ceremony.
 
+## **Who is an Indie Dev**
+
+For our purposes, an **Indie Developer** is an individual or a small group of people publishing software or innovating in a space without large external funding. We believe that it is incredibly important to be completely in this definition for this event, and it may be subject to change. However, if we decide to modify this definition, we will make sure to make a blog post about it.
+
 ## **We are looking for Sponsors**
 
 As we embark on this exciting journey to honor indie developers, we are inviting companies to join us as sponsors. By sponsoring the Indie Dev Awards, your organization will have the opportunity to:
