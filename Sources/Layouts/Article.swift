@@ -33,6 +33,7 @@ struct Article: ContentPage {
             Text(content.title)
                 .font(.title1)
             
+            Text(content.date.formatted(date: .abbreviated, time: .shortened))
             if let author = content.author {
                 Text(markdown: "By: [\(author)](/author/\(author.lowercased().replacingOccurrences(of: " ", with: "-")))")
             }
