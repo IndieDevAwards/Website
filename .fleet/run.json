@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "command",
+            "name": "Run Website Preview",
+            "program": "/usr/local/bin/ignite",
+            "args": ["run", "--preview"],
+        },
+        
+    ]
+}
