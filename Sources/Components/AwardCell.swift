@@ -35,7 +35,7 @@ struct AwardCell: Component {
             .margin([.leading])
         }
         .style("display:flex")
-        .backgroundColor(Color(hex: "#eaeef0"))
+        .backgroundColor(Color(hex: "#f6f6f6"))
         .cornerRadius("6px")
         .margin()
     }
