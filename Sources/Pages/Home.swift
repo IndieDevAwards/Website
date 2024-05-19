@@ -63,9 +63,46 @@ struct Home: StaticPage {
                     .margin()
             }
             .style("padding-top: calc(40px + min(0px, (510px - 100vw) / 2));")
-            Text(markdown: "**More Coming Soon...**")
-                .font(.title3)
-                .margin()
+            
+            Group {
+                Text("Awards")
+                    .font(.title1)
+                    .horizontalAlignment(.leading)
+                Divider()
+                
+                Group {
+                    Text("Innovation Leaders")
+                        .font(.title3)
+                        .horizontalAlignment(.leading)
+                        .margin(.leading)
+                    
+                    // Desktop Awards
+                    awards(for: .innovationLeader)
+                        .columns(2)
+                }
+                
+                Group {
+                    Text("Best UI/UX")
+                        .font(.title3)
+                        .horizontalAlignment(.leading)
+                        .margin(.leading)
+                    
+                    // Desktop Awards
+                    awards(for: .bestUIX)
+                        .columns(2)
+                }
+                
+                Group {
+                    Text("Best Consumer Product")
+                        .font(.title3)
+                        .horizontalAlignment(.leading)
+                        .margin(.leading)
+                    
+                    // Desktop Awards
+                    awards(for: .bestConsumerProduct)
+                        .columns(2)
+                }
+            }
         }
         .horizontalAlignment(.center)
     }
@@ -80,6 +117,16 @@ struct Home: StaticPage {
                         Spacer()
                             .frame(height: "100%")
                     }
+                }
+            }
+        }
+    }
+    
+    func awards(for category: Award.Category) -> Section {
+        Section {
+            for award in Award.awards(for: category) {
+                Group {
+                    AwardCell(award)
                 }
             }
         }
@@ -110,6 +157,45 @@ extension Array {
             return self
         } else {
             return self.dropLast(self.count-k)
+        }
+    }
+}
+
+struct Award: Identifiable {
+    let id = UUID()
+    let title: String
+    let description: String
+    
+    enum Category: String, CaseIterable {
+        case innovationLeader, bestUIX, bestConsumerProduct
+    }
+    static private let innovationLeader: [Self] = [
+        .init(title: "AI", description: "Pushing the boundaries of what artificial intelligence can do."),
+        .init(title: "Data Management & Security", description: "Creating or improving new ways to securely and efficiently store/manage data."),
+        .init(title: "Web Tools", description: "Arming developers with new web tools to create even better websites."),
+        .init(title: "Augmented Reality", description: "Opening new avenues for the questioning of reality."),
+        .init(title: "Virtual Reality", description: "Pushing the boundaries of immersion in a virtual experience.")
+    ]
+    static private let bestUIX: [Self] = [
+        .init(title: "Web", description: "The best user experience crafted with an incredible design for the web."),
+        .init(title: "iOS", description: "The best user experience crafted with an incredible design for iOS."),
+        .init(title: "Android", description: "The best user experience crafted with an incredible design for Android.")
+    ]
+    static private let bestConsumerProduct: [Self] = [
+        .init(title: "AI", description: "Enabling consumers to do even crazier things with artifical intelligence."),
+        .init(title: "Developer Tools", description: "Empowering developers to build incredible products."),
+        .init(title: "Augmented Reality", description: "Bringing ReadyPlayerOne to life?"),
+        .init(title: "Virtual Reality", description: "Immersing people in a whole other world, providing an experience only found with virtual reality.")
+    ]
+    
+    static func awards(for category: Category) -> [Self] {
+        switch category {
+        case .innovationLeader:
+            innovationLeader
+        case .bestUIX:
+            bestUIX
+        case .bestConsumerProduct:
+            bestConsumerProduct
         }
     }
 }
