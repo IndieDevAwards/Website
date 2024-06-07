@@ -64,5 +64,4 @@ struct Author: ContentPage {
     }
 }
 
-extension Divider: BlockElement {}
 extension Card: InlineElement {}

@@ -61,7 +61,7 @@ struct NavBar: Component {
         }
         .navigationItemAlignment(.trailing)
         .navigationBarStyle(.dark)
-        .backgroundColor(.init(hex: "#ed3e55"))
+        .background(.init(hex: "#ed3e55"))
         .position(.fixedTop)
     }
 }

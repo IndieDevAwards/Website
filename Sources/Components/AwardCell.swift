@@ -19,7 +19,7 @@ struct AwardCell: Component {
         Group {
             Group {}
                 .frame(width: 6, height: 125)
-                .backgroundColor(Color(hex: "#ff4057"))
+                .background(Color(hex: "#ff4057"))
                 .cornerRadius(.leading, "6px")
             Group {
                 Text(award.title)
@@ -35,7 +35,7 @@ struct AwardCell: Component {
             .margin([.leading])
         }
         .style("display:flex")
-        .backgroundColor(Color(hex: "#f6f6f6"))
+        .background(Color(hex: "#f6f6f6"))
         .cornerRadius("6px")
         .margin()
     }
