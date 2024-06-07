@@ -1,6 +1,6 @@
 ---
 author: Tyler Yust
-description: Get Ready for the Indie Dev Awards 2024
+description: The moment you've all been waiting for is here! We're excited to announce that...
 alt: The image for 'Get Ready for the Indie Dev Awards 2024'
 date: 2024-06-7 10:00
 image: /images/logo-color-social-share.png
@@ -9,17 +9,17 @@ tags: 2024
 layout: Article
 ---
 
-# Get Ready for the Indie Dev Awards 2024
+# **Get Ready for the Indie Dev Awards 2024**
 
 Hello Indie Devs,
 
 The moment you've all been waiting for is here! We're excited to announce that submissions are now open for the Indie Dev Awards 2024! This is your chance to shine and flaunt your awesome projects, showing everyone what you've got to earn the respect of indie developers.
 
-## Why Should You Submit?
+## **Why Should You Submit?**
 
 The Indie Dev Awards—the celebration of passion, creativity, and innovation that independent developers put forth every day in their endeavors. We know what you pour into those builds: blood, sweat, and code. We want to share your accomplishments if you have been creating an awe-inspiring AI, a jaw-dropping AR experience, or a sleek and intuitive mobile app.
 
-## Categories to Feature Your Talent
+## **Categories to Feature Your Talent**
 
 We have three great categories in which your project can shine:
 
@@ -46,11 +46,11 @@ Are you making some waves in the consumer market with your product? Show us how 
 3. **Augmented Reality**: Bring the virtual world into our world.
 4. **Virtual Reality**: Immersing people in a whole other world, providing an experience only found with virtual reality.
 
-## How to Participate
+## **How to Participate**
 
 Submitting your project is easy! Just come to our [submission form](https://indiedevawards.com/submit), enter your project details, and we will handle the rest. Our team can't wait to see what you have been working on.
 
-## What's in it for You?
+## **What's in it for You?**
 
 Winning an Indie Dev Award is more than just a trophy. It's a mark of excellence that can boost your project's visibility, attract new users, and open doors to exciting opportunities.
 
