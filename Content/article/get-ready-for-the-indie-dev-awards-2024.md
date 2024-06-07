@@ -2,7 +2,7 @@
 author: Tyler Yust
 description: Get Ready for the Indie Dev Awards 2024
 alt: The image for 'Get Ready for the Indie Dev Awards 2024'
-date: 2024-06-6 10:00
+date: 2024-06-7 10:00
 image: /images/logo-color-social-share.png
 image-hidden: true
 tags: 2024
