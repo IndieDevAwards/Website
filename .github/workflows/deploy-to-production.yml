@@ -22,9 +22,13 @@ jobs:
       with:
         swift-version: '5.9' # Set the Swift version you need
 
-    - name: Build Site
+    - name: Build Swift package
       run: |
-        ignite build
+        swift build --configuration release
+
+    - name: Run Swift package
+      run: |
+        .build/release/IndieDevAwardsWebsite
 
     - name: Publish to Cloudflare Pages
       uses: cloudflare/pages-action@v1
