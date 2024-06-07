@@ -58,7 +58,7 @@ struct ArticleCell: Component {
                 Text(markdown: description)
             }
             
-            Link("Read Full Article...", target: article.path)
+            Link("Read Full Article", target: article.path)
                 .linkStyle(.button)
         }
         .frame(height: "100%")
