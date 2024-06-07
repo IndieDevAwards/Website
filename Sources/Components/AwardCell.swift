@@ -17,10 +17,6 @@ struct AwardCell: Component {
     
     func body(context: PublishingContext) -> [any PageElement] {
         Group {
-            Group {}
-                .frame(width: 6, height: 125)
-                .background(Color(hex: "#ff4057"))
-                .cornerRadius(.leading, "6px")
             Group {
                 Text(award.title)
                     .font(.lead)
@@ -32,7 +28,7 @@ struct AwardCell: Component {
             .style("display: flex")
             .style("flex-direction: column")
             .style("justify-content: center")
-            .margin([.leading])
+            .margin([.leading, .top])
         }
         .style("display:flex")
         .background(Color(hex: "#f6f6f6"))
