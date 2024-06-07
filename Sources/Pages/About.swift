@@ -17,14 +17,7 @@ struct About: StaticPage {
             .font(.title1)
             .horizontalAlignment(.leading)
         Divider()
-        // Desktop Blog Posts
         personCards(context: context)
-        .columns(3)
-        .style("display: none; min-width: 500px;")
-        // Mobile Blog Posts
-        personCards(context: context)
-        .columns(1)
-        .style("display: block; max-width: 500px;")
     }
     
     func personCards( context: PublishingContext) -> Section {
