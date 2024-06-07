@@ -162,11 +162,11 @@ struct Award: Identifiable {
         case innovationLeader, bestUIX, bestConsumerProduct
     }
     static private let innovationLeader: [Self] = [
-        .init(title: "AI", description: "Pushing the boundaries of what artificial intelligence can do."),
-        .init(title: "Data Management & Security", description: "Creating or improving new ways to securely and efficiently store/manage data."),
-        .init(title: "Web Tools", description: "Arming developers with new web tools to create even better websites."),
-        .init(title: "Augmented Reality", description: "Opening new avenues for the questioning of reality."),
-        .init(title: "Virtual Reality", description: "Pushing the boundaries of immersion in a virtual experience.")
+        .init(title: "AI", description: "Show us how you're redefining artificial intelligence."),
+        .init(title: "Data Management & Security", description: "Innovate the way we store and secure data."),
+        .init(title: "Web Tools", description: "Equip developers with the tools to build the web of tomorrow."),
+        .init(title: "Augmented Reality", description: "Challenge our perception of reality."),
+        .init(title: "Virtual Reality", description: "Create immersive experiences that transport us to new worlds.")
     ]
     static private let bestUIX: [Self] = [
         .init(title: "Web", description: "The best user experience crafted with an incredible design for the web."),
@@ -176,7 +176,7 @@ struct Award: Identifiable {
     static private let bestConsumerProduct: [Self] = [
         .init(title: "AI", description: "Enabling consumers to do even crazier things with artifical intelligence."),
         .init(title: "Developer Tools", description: "Empowering developers to build incredible products."),
-        .init(title: "Augmented Reality", description: "Bringing ReadyPlayerOne to life?"),
+        .init(title: "Augmented Reality", description: "Bring the virtual world into our world."),
         .init(title: "Virtual Reality", description: "Immersing people in a whole other world, providing an experience only found with virtual reality.")
     ]
     

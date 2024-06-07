@@ -34,17 +34,17 @@ Are you pushing the boundaries of technology? This category is for you! We're lo
 
 ### Best UI and UX designs
 
-1. **Web**: Make it an excellent and easily navigable online experience.
-2. **iOS**: Create a stunning iOS design.
-3. **Android**: Create an incredible user experience on Android.
+1. **Web**: The best user experience crafted with an incredible design for the web.
+2. **iOS**: The best user experience crafted with an incredible design for iOS.
+3. **Android**: The best user experience crafted with an incredible design for Android."
 
 ### Best Consumer Product
 
 Are you making some waves in the consumer market with your product? Show us how you are changing the game:
-1. **AI**: Give the users a taste of artificial intelligence's power.
-2. **Developer Tools**: Enable developers to make extraordinary products.
+1. **AI**: Enabling consumers to do even crazier things with artifical intelligence.
+2. **Developer Tools**: Empowering developers to build incredible products.
 3. **Augmented Reality**: Bring the virtual world into our world.
-4. **Virtual Reality**: Pull your users into excellent, mind-boggling virtual experiences.
+4. **Virtual Reality**: Immersing people in a whole other world, providing an experience only found with virtual reality.
 
 ## How to Participate
 

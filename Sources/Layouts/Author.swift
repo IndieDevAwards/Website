@@ -57,7 +57,7 @@ struct Author: ContentPage {
                     Spacer()
                         .frame(height: "100%")
                 }
-                Spacer()
+//                Spacer()
 //                Spacer()
             }
         }

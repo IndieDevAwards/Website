@@ -1,7 +1,7 @@
 ---
 layout: Author
 alt: A photo representation of Morris
-image: /images/photos/Tyler-Profile-Pic.jpg
+image: /images/photos/Tyler-Profile-Pic.jpeg
 subtitle: Writer
 ---
 

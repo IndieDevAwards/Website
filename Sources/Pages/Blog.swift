@@ -33,8 +33,8 @@ struct Blog: StaticPage {
                     Spacer()
                         .frame(height: "100%")
                 }
-                Spacer()
-                Spacer()
+//                Spacer()
+//                Spacer()
             }
         }
     }
