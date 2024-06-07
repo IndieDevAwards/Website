@@ -48,7 +48,7 @@ Are you making some waves in the consumer market with your product? Show us how 
 
 ## How to Participate
 
-Submitting your project is easy! Just come to our [submission form](https://indiedevawards.com/submissions), enter your project details, and we will handle the rest. Our team can't wait to see what you have been working on.
+Submitting your project is easy! Just come to our [submission form](https://indiedevawards.com/submit), enter your project details, and we will handle the rest. Our team can't wait to see what you have been working on.
 
 ## What's in it for You?
 
