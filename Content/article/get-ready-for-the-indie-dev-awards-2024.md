@@ -46,9 +46,9 @@ Are you making some waves in the consumer market with your product? Show us how 
 3. **Augmented Reality**: Bring the virtual world into our world.
 4. **Virtual Reality**: Pull your users into excellent, mind-boggling virtual experiences.
 
-## How to Participate (NEEDS EDITING)
+## How to Participate
 
-Submitting your project is easy! Just come to our [submission page](https://indiedevawards.com/submissions), enter your project details, and we will handle the rest. Our team can't wait to see what you have been working on.
+Submitting your project is easy! Just come to our [submission form](https://indiedevawards.com/submissions), enter your project details, and we will handle the rest. Our team can't wait to see what you have been working on.
 
 ## What's in it for You?
 
