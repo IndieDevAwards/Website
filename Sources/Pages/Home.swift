@@ -30,7 +30,7 @@ struct Home: StaticPage {
                 .margin(.vertical)
             
             Group {
-                Link("Get Involved!", target: URL("mailto:info@indiedevawards.com"))
+                Link("Submit Project", target: URL("/submit"))
                     .linkStyle(.button)
                     .margin(.trailing, .small)
                     .role(.primary)
