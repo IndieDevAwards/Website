@@ -28,7 +28,6 @@ struct Home: StaticPage {
                 .frame(width: "50%")
             Text("We are a brand new award show dedicated to spotlighting indie projects and innovation in a variety of categories across the development industry.")
                 .margin(.vertical)
-            
             Group {
                 Link("Submit Project", target: URL("/submit"))
                     .linkStyle(.button)
@@ -49,14 +48,7 @@ struct Home: StaticPage {
                     .horizontalAlignment(.leading)
                 Divider()
                 
-                // Desktop Blog Posts
                 blogPosts(context: context)
-                .columns(2)
-                .style("display: none; min-width: 500px;")
-                // Mobile Blog Posts
-                blogPosts(context: context)
-                .columns(1)
-                .style("display: block; max-width: 500px;")
                 
                 Link("See More →", target: "/blog")
                     .linkStyle(.button)

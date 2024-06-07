@@ -18,14 +18,7 @@ struct Blog: StaticPage {
             .horizontalAlignment(.leading)
         Divider()
         
-        // Desktop Blog Posts
         blogPosts(context: context)
-        .columns(2)
-        .style("display: none; min-width: 500px;")
-        // Mobile Blog Posts
-        blogPosts(context: context)
-        .columns(1)
-        .style("display: block; max-width: 500px;")
     }
     
     func blogPosts(context: PublishingContext) -> Section {
